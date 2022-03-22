@@ -114,9 +114,12 @@ namespace MethodExercise
             int remainder = Modulus(mod1, mod2);
             Console.WriteLine($"When you divide {mod1} by {mod2}, the remainder left over is {remainder}.  Ta da!");
 
+            //-------------------------------Challenge Mode
+            Console.WriteLine($"Challenge mode result is: {Sum(1,2,3,4,5,6,7,8,9,10)}");
+
         }
 
-        //------------------------------------------------Methods for Exercise 2
+        //------------------------------------------------methods for exercise 2
         public static int Add(int num1, int num2)
         {
             return num1 + num2;
@@ -141,5 +144,17 @@ namespace MethodExercise
         {
             return num1 % num2;
         }
-    }
+
+        //-----------------------------------------------------Challenge Mode using Params Keyword
+        // using example from https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/params
+        public static int Sum(params int[] nums)
+        {
+            var sum = 0;
+            foreach (var x in nums)
+            {
+                sum += x;
+            }
+            return sum;
+            }
+        }
 }
